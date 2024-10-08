@@ -6,8 +6,8 @@ const Hero = React.forwardRef((props, ref) => {
             <div className="flex flex-col items-center text-center">
                 <div className="bg-primary flex justify-between w-full px-6 mb-16">
                     <img src="/heroImg1.png" alt="Person fixing a door" className="rounded-6xl -mt-[60px] h-[690px]" />
-                    <div className="flex flex-col items-center justify-center -py-10">
-                        <div className="flex space-x-4 text-lg text-gray-300 mb-4 px-10">
+                    <div className="flex flex-col items-center justify-center -py-10 mt-20">
+                        <div className="flex space-x-4 text-lg text-customGray mb-4 px-10">
                             <span>Maintenances</span>
                             <span>•</span>
                             <span>Repairs</span>
@@ -22,7 +22,7 @@ const Hero = React.forwardRef((props, ref) => {
                         <button className="bg-secondary font-bold py-1 px-1.5 rounded-full flex gap-x-4 items-center">
                             <span className="ml-4 text-lg">Call Us Now</span> <img src="/call.png" alt="" className="h-10" />
                         </button>
-                        <div className="flex justify-between gap-x-10 font-bold text-md text-gray-300 absolute bottom-8">
+                        <div className="flex justify-between gap-x-10 font-bold text-md text-customGray mt-32">
                             <div className="flex items-center text-left gap-x-3">
                                 <img src="/verified.png" alt="verified" />
                                 <span>Satisfaction <br /> Guarantee</span>

@@ -2,13 +2,13 @@ import React from "react";
 
 const About = React.forwardRef((props, ref) => {
     return (
-        <div ref={ref} className="bg-white h-screen pt-[80px]">
-            <div className="flex justify-center items-center gap-x-20 px-60 mt-14">
+        <div ref={ref} className="bg-white h-screen pt-[80px] -mb-28">
+            <div className="flex justify-center items-center gap-x-20 px-48 mt-14">
                 <div className="w-full">
                     <h1 className="text-4xl font-bold mb-5 text-black">Professional for your home services</h1>
                     <p className="text-[#545971]">You need help for home care? We are home care professionals focused in the US region. We provide several services that support home services</p>
                     <div className="text-[#1F3584]">
-                        <div className="grid grid-cols-2 gap-4 mt-8 mb-8">
+                        <div className="grid grid-cols-2 gap-4 my-8">
                             <div className="flex items-center gap-x-2">
                                 <img src="/primaryTick.png" alt="Tick" />
                                 <span>Repair and Installation</span>
