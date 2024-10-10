@@ -65,6 +65,30 @@ const Services = React.forwardRef((props, ref) => {
             stars: 3,
             review: 'Good experience overall, but there were a few delays in scheduling the service.',
         },
+        {
+            name: 'John Doe',
+            profilePic: '/John-Doe.jpeg',
+            stars: 5,
+            review: 'Amazing service! The HomePro team was professional and quick. My home is now safer and more secure.',
+        },
+        {
+            name: 'John Doe',
+            profilePic: '/John-Doe.jpeg',
+            stars: 5,
+            review: 'Amazing service! The HomePro team was professional and quick. My home is now safer and more secure.',
+        },
+        {
+            name: 'John Doe',
+            profilePic: '/John-Doe.jpeg',
+            stars: 5,
+            review: 'Amazing service! The HomePro team was professional and quick. My home is now safer and more secure.',
+        },
+        {
+            name: 'John Doe',
+            profilePic: '/John-Doe.jpeg',
+            stars: 5,
+            review: 'Amazing service! The HomePro team was professional and quick. My home is now safer and more secure.',
+        },
     ];
 
     const handleNext = () => {
@@ -77,14 +101,14 @@ const Services = React.forwardRef((props, ref) => {
 
     return (
         <div>
-            <div ref={ref} className="container mx-auto px-48 py-16 text-black pt-[120px]">
+            <div ref={ref} className="container mx-auto lg:px-48 px-6 py-16 text-black lg:pt-[120px] mt-[150px]">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold">Our Services</h1>
-                    <p className="text-gray-500 mt-4 px-80">You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!</p>
+                    <p className="text-gray-500 mt-4 lg:px-80">You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="flex flex-col items-start justify-start text-start">
+                        <div key={index} className="flex flex-col lg:items-start items-center lg:justify-start justify-center lg:text-start text-center lg:px-0 px-9">
                             <div className="bg-primary text-white rounded-full w-16 h-16  mb-4">
                                 <img src={`${service.icon}`} alt={service.title} className="text-2xl" />
                             </div>
@@ -99,20 +123,20 @@ const Services = React.forwardRef((props, ref) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-primary text-white py-10 px-24 rounded-lg mt-10 mx-20 relative">
-                <img src="/perks_decorationL.png" alt="perks_decorationL" className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-96" />
-                <img src="/perks_decorationR.png" alt="perks_decorationR" className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-96" />
+            <div className="bg-primary text-white py-10 lg:px-24 px-14 rounded-lg lg:mt-10 lg:mx-20 mx-6 relative">
+                <img src="/perks_decorationL.png" alt="perks_decorationL" className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-96 lg:block md:block hidden sm:hidden xs:hidden" />
+                <img src="/perks_decorationR.png" alt="perks_decorationR" className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 w-10 h-96 lg:block md:block hidden sm:hidden xs:hidden" />
 
-                <div className="flex justify-between items-end">
-                    <h1 className="text-5xl font-bold">Fast, Friendly, and Satisfaction Guarantee</h1>
-                    <p className="text-customGray w-3/4">No matter how big or small your work is, whether it's for the interior or exterior of your home, we are ready to serve and help you solve your home problems.</p>
+                <div className="flex flex-col lg:flex-row gap-y-4 justify-between items-end lg:text-start text-center">
+                    <h1 className="lg:text-5xl text-2xl font-bold ">Fast, Friendly, and Satisfaction Guarantee</h1>
+                    <p className="text-customGray lg:w-3/4">No matter how big or small your work is, whether it's for the interior or exterior of your home, we are ready to serve and help you solve your home problems.</p>
                 </div>
 
-                <img src="/perksDivider.png" alt="divider" className="my-10" />
+                <img src="/perksDivider.png" alt="divider" className="lg:my-10 my-5" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {perks.map((perk, index) => (
-                        <div key={index} className="flex items-start">
+                        <div key={index} className="flex flex-col lg:flex-row lg:items-start items-center lg:text-start text-center">
                             <img src={`${perk.icon}`} alt={perk.title} className="h-20 mr-4" />
                             <div className="flex flex-col gap-y-2">
                                 <h2 className="text-lg font-semibold">{perk.title}</h2>
@@ -122,7 +146,7 @@ const Services = React.forwardRef((props, ref) => {
                     ))}
                 </div>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center bg-white text-black py-10 lg:py-20 px-5 lg:px-28">
+            <div className="flex flex-col lg:flex-row justify-center items-center bg-white text-black py-10 lg:py-20 px-5 lg:pl-28 lg:pr-48">
                 <div className="flex justify-center lg:justify-start w-full lg:w-1/2">
                     <img
                         src="/working.png"
@@ -132,59 +156,68 @@ const Services = React.forwardRef((props, ref) => {
                 </div>
 
                 <div className="w-full flex flex-col gap-y-14 lg:w-1/2 mt-10 lg:mt-0 lg:ml-10">
-                    <h2 className="text-4xl lg:text-5xl font-bold">How HomePro<br />works?</h2>
+                    <h2 className="text-3xl lg:text-5xl font-bold">How HomePro<br />works?</h2>
 
                     <div className="space-y-10">
-                        <div className="flex items-start">
-                            <div className="text-6xl font-bold text-customGray mr-4">1.</div>
-                            <div className="flex pl-3 gap-x-1">
-                                <h3 className="text-lg font-semibold w-80">Call us anytime 24/7</h3>
-                                <p className="text-gray-500 ml-8">
-                                    You can contact us directly, we will quickly put you in touch with our home care professionals who are ready anytime.
-                                </p>
+                        <div>
+                            <div className="flex items-start gap-x-3">
+                                <span className="text-6xl font-bold text-customGray mr-3">1.</span>
+                                <h3 className="text-lg font-semibold lg:w-80 w-40">Call us anytime 24/7</h3>
+                                <div className="ml-7 lg:block md:block hidden sm:hidden xs:hidden">
+                                    <p className="text-gray-500">
+                                        You can contact us directly, we will quickly put you in touch with our home care professionals who are ready anytime.
+                                    </p>
+                                </div>
                             </div>
+                            <p className="text-gray-500 lg:hidden md:hidden mt-3">
+                                You can contact us directly, we will quickly put you in touch with our home care professionals who are ready anytime.
+                            </p>
                         </div>
 
-                        <div className="flex items-start">
-                            <div className="flex items-start">
-
-                                <div className="text-6xl font-bold text-customGray mr-4">2.</div>
-                                <div className="flex gap-x-1">
-                                    <h3 className="text-lg font-semibold w-80">Schedule Service</h3>
-                                    <p className="text-gray-500 ml-8">
+                        <div>
+                            <div className="flex items-start gap-x-3">
+                                <span className="text-6xl font-bold text-customGray ">2.</span>
+                                <h3 className="text-lg font-semibold lg:w-80 w-20">Schedule Service</h3>
+                                <div className="ml-7 lg:block md:block hidden sm:hidden xs:hidden">
+                                    <p className="text-gray-500">
                                         After connecting your call, our home care experts will answer your questions and provide flexible appointment times.
                                     </p>
                                 </div>
                             </div>
+                            <p className="text-gray-500 lg:hidden md:hidden mt-3">
+                                After connecting your call, our home care experts will answer your questions and provide flexible appointment times.
+                            </p>
                         </div>
 
-                        <div className="flex items-start">
-                            <div className="flex items-start">
-
-                                <div className="text-6xl font-bold text-customGray mr-4">3.</div>
-                                <div className="flex gap-x-1">
-                                    <h3 className="text-lg font-semibold w-96">Your request is completed</h3>
-                                    <p className="text-gray-500 ml-8">
+                        <div>
+                            <div className="flex items-start gap-x-3">
+                                <span className="text-6xl font-bold text-customGray">3.</span>
+                                <h3 className="text-lg font-semibold lg:w-96 w-40">Your request is completed</h3>
+                                <div className="ml-7 lg:block md:block hidden sm:hidden xs:hidden">
+                                    <p className="text-gray-500">
                                         Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to continue, the technician will get to work.
                                     </p>
                                 </div>
                             </div>
+                            <p className="text-gray-500 lg:hidden md:hidden mt-3">
+                                Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to continue, the technician will get to work.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-center p-10 bg-white text-black rounded-lg shadow-md space-y-10">
-                <h1 className="text-5xl text-center font-bold mb-6 leading-tight">Here our original reviews<br /> from trusted platform</h1>
-                <img src="/trustpilot.png" alt="Trustpilot" className="mb-4" />
+            <div className="flex flex-col items-center justify-center p-10 bg-white text-black rounded-lg space-y-10">
+                <h1 className="lg:text-5xl text-2xl text-center font-bold lg:mb-6 leading-tight">Here our original reviews<br /> from trusted platform</h1>
+                <img src="/trustpilot.png" alt="Trustpilot" className="mb-4 h-10 lg:h-12" />
 
-                <div className="flex items-center justify-center px-48 w-full">
-                    <button onClick={handlePrev} className="p-3 mb-20 bg-gray-100 text-white rounded-full hover:bg-secondary">
+                <div className="flex items-center justify-center lg:px-48 border-t w-full">
+                    <button onClick={handlePrev} className="p-3 mb-20 bg-gray-100 text-white rounded-full hidden lg:block hover:bg-secondary">
                         <img src="/arrow-Left.png" alt="Left Arrow" />
                     </button>
 
-                    <div className="w-[986px] h-[250px] px-[129px] py-[40px] mx-4 text-center">
-                        <p className="text-lg h-32 text-gray-600">{reviews[currentIndex].review}</p>
-                        <div className="flex items-center justify-center mt-4">
+                    <div className="lg:w-[986px] h-[280px] lg:px-[129px] py-[40px] lg:mx-4 text-center">
+                        <p className="lg:text-lg h-32 text-gray-600">{reviews[currentIndex].review}</p>
+                        <div className="flex items-center justify-center lg:mt-4 mt-8">
                             <img src={reviews[currentIndex].profilePic} alt={reviews[currentIndex].name} className="w-16 h-16 rounded-full" />
                             <div className="ml-4 text-start">
                                 <h3 className="text-lg font-bold">{reviews[currentIndex].name}</h3>
@@ -200,18 +233,24 @@ const Services = React.forwardRef((props, ref) => {
                         </div>
                     </div>
 
-                    <button onClick={handleNext} className="p-3  mb-20 text-lg font-bold bg-gray-100 text-white rounded-full hover:bg-secondary">
+                    <button onClick={handleNext} className="p-3 mb-20 text-lg font-bold bg-gray-100 text-white rounded-full hidden lg:block hover:bg-secondary">
                         <img src="/arrow-Right.png" alt="Right Arrow" />
                     </button>
                 </div>
 
-                <div className="flex justify-center mt-4">
+                <div className="flex justify-center items-center mt-4">
+                    <button onClick={handlePrev} className="p-3 mr-5 bg-gray-100 text-white rounded-full lg:hidden md:hidden hover:bg-secondary">
+                        <img src="/arrow-Left.png" alt="Left Arrow" />
+                    </button>
                     {reviews.map((_, index) => (
                         <div
                             key={index}
                             className={`w-2 h-2 rounded-full mx-1 ${index === currentIndex ? 'bg-secondary w-9' : 'bg-gray-300'} transition-all duration-500`}
                         />
                     ))}
+                    <button onClick={handleNext} className="p-3 ml-5 text-lg font-bold bg-gray-100 text-white rounded-full lg:hidden md:hidden hover:bg-secondary">
+                        <img src="/arrow-Right.png" alt="Right Arrow" />
+                    </button>
                 </div>
 
             </div>

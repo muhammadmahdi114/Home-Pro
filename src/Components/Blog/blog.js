@@ -62,15 +62,15 @@ const Blog = React.forwardRef((props, ref) => {
     };
 
     return (
-        <div ref={ref} className="bg-white text-black pt-[95px] -mb-[80px] rounded-lg overflow-hidden">
+        <div ref={ref} className="bg-white text-black lg:pt-[95px] lg:-mb-[80px] lg:px-0 px-6 rounded-lg overflow-hidden">
             <h2 className="text-4xl font-bold text-center mb-8">Explore Insights in Our Blog</h2>
             <p className="text-center mb-4">
                 Find lots of insights and information on our blog. Explore, learn, and get inspired today.
             </p>
-            <div className="grid md:grid-cols-3 px-48">
+            <div className="grid md:grid-cols-3 lg:px-48">
                 {blogs.map((blog, index) => (
-                    <div key={index} className="bg-white w-96 rounded-lg shadow-lg p-6 mx-auto mb-6">
-                        <img src={blog.image} alt={blog.title} className="w-72 h-36 object-cover rounded-lg mb-4" />
+                    <div key={index} className="bg-white w-96 rounded-lg p-6 mx-auto mb-6">
+                        <img src={blog.image} alt={blog.title} className="w-80 h-40 object-cover rounded-lg mb-4" />
                         <p className="text-gray-500 text-sm mb-2">{blog.date}</p>
                         <h3 className="text-xl font-semibold text-gray-900 mb-3">{blog.title}</h3>
                         <p className="text-gray-700 mb-4">{blog.description}</p>
@@ -87,19 +87,19 @@ const Blog = React.forwardRef((props, ref) => {
                     </div>
                 ))}
             </div>
-            <div className="text-center mt-4">
+            <div className="text-center">
                 <a href="#more" className="text-secondary text-lg font-bold hover:underline">
                     View More &gt;
                 </a>
             </div>
-            <div className="px-48 mx-auto pt-20 flex">
-                <div className="w-1/3 pr-8">
+            <div className="flex lg:flex-row flex-col lg:justify-start justify-center lg:items-start items-center lg:px-48 mx-auto lg:pt-20 pt-10">
+                <div className="lg:w-1/3 lg:pr-8 lg:text-start text-center">
                     <h1 className="text-4xl font-bold mb-4 leading-tight">Frequently Asked Questions</h1>
                     <p>Still need help? <span className="text-secondary underline font-bold">Get Help Now</span></p>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-4 lg:mt-0 mt-10">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="rounded-lg w-[700px]">
+                        <div key={index} className="rounded-lg lg:w-[700px]">
                             <button
                                 className={`w-full text-left p-4 ${openFaq === index ? 'bg-[#F3F5F9] pr-5' : 'bg-white'
                                     } rounded-t-lg flex justify-between items-center`}
@@ -109,14 +109,19 @@ const Blog = React.forwardRef((props, ref) => {
                                 <img
                                     src={` ${openFaq === index ? 'upVector.png' : 'downVector.png'}`}
                                     alt={` ${openFaq === index ? 'upVector' : 'downVector'}`}
-                                    className={` ${openFaq === index ? "w-3" : "w-5"}  ml-5`}
+                                    className={` ${openFaq === index ? "w-3" : "w-5"} ml-5`}
                                 />
                             </button>
-                            {openFaq === index && (
-                                <div className="p-4 bg-gray-100 text-sm text-gray-600">
-                                    {faq.answer}
-                                </div>
-                            )}
+                            <div
+                                className={`transition-all duration-500 ease-in-out overflow-hidden ${openFaq === index ? 'max-h-96' : 'max-h-0'
+                                    }`}
+                            >
+                                {openFaq === index && (
+                                    <div className="p-4 bg-gray-100 lg:text-sm text-gray-600">
+                                        {faq.answer}
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </div>
