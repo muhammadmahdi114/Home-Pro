@@ -2,7 +2,7 @@ import React from "react";
 
 const About = React.forwardRef((props, ref) => {
     return (
-        <div ref={ref} className="bg-white h-screen pt-[80px] lg:-mb-28">
+        <div ref={ref} className="bg-white h-screen pt-[90px] lg:-mb-28">
             <div className="flex flex-col lg:flex-row justify-start items-center gap-x-20 lg:px-48 lg:mt-14">
                 <div className="w-full lg:w-1/2 lg:order-2 mb-8 lg:mb-0">
                     <img src="/About.png" alt="About" className="mx-auto w-4/5 lg:w-full" />

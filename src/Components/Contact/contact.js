@@ -3,7 +3,7 @@ import React from "react";
 const Contact = React.forwardRef((props, ref) => {
     return (
         <>
-            <div ref={ref} className="bg-white lg:mt-[80px] ">
+            <div ref={ref} className="bg-white mt-[80px] ">
 
                 <div className="bg-primary lg:mt-[80px] lg:px-0 px-6">
                     <img

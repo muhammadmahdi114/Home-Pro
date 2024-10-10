@@ -101,7 +101,7 @@ const Services = React.forwardRef((props, ref) => {
 
     return (
         <div>
-            <div ref={ref} className="container mx-auto lg:px-48 px-6 py-16 text-black lg:pt-[120px] mt-[150px]">
+            <div ref={ref} className="container mx-auto lg:px-48 px-6 py-16 text-black lg:pt-[120px] mt-[200px]">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold">Our Services</h1>
                     <p className="text-gray-500 mt-4 lg:px-80">You have problems with leaking pipes, broken tiles, lost keys or want to tidy up the trees around you, of course you need our help!</p>

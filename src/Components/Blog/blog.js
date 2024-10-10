@@ -62,7 +62,7 @@ const Blog = React.forwardRef((props, ref) => {
     };
 
     return (
-        <div ref={ref} className="bg-white text-black lg:pt-[95px] lg:-mb-[80px] lg:px-0 px-6 rounded-lg overflow-hidden">
+        <div ref={ref} className="bg-white text-black pt-[95px] lg:-mb-[80px] lg:px-0 px-6 rounded-lg overflow-hidden">
             <h2 className="text-4xl font-bold text-center mb-8">Explore Insights in Our Blog</h2>
             <p className="text-center mb-4">
                 Find lots of insights and information on our blog. Explore, learn, and get inspired today.
